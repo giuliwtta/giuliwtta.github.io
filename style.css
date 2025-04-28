@@ -76,6 +76,6 @@ body {
     box-shadow: 0 0 10px gold;
     transition: 0.2s ease;
 }
-.control-panel {
+.control-panel button {
     cursor: pointer;
 }
