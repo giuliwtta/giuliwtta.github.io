@@ -1,0 +1,81 @@
+h1 {
+    font-size: 75px; 
+    color: salmon; 
+    margin-top: 25px;
+    text-align: center;
+}
+div {
+    font-size: 20px;
+}
+#rosso {
+    background-color:red;
+}
+#nero {
+    background-color: black; 
+    color: white;
+}
+#giallo {
+    background-color:yellow;
+}
+#verde {
+    background-color: forestgreen;
+}
+#blu {
+    background-color:#afeeee;
+}
+#viola {
+    background-color:blueviolet;
+}
+#rosa {
+    background-color:deeppink;
+}
+#marrone {
+    background-color: saddlebrown;
+    color: white;
+}
+#arancione {
+    background-color: orangered;
+}
+canvas {
+    border: 2px solid black;
+    margin-top: 10px;
+    display: block; 
+    background-color: white;
+}
+body {
+    background-color: antiquewhite;
+}
+
+.control-panel {
+    width: 100%;
+    position: relative;
+}
+
+.control-tools {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: fit-content;
+}
+
+.control-color {
+    position: relative;
+    left: 0;
+}
+.color-button {
+    border-radius: 15px;
+}
+.strumenti {
+    border-radius: 15px;
+    background-color: beige;
+}
+.attivo {
+    outline: 3px solid gold;
+    box-shadow: 0 0 10px gold;
+    transition: 0.2s ease;
+}
+.control-panel {
+    cursor: pointer;
+}
