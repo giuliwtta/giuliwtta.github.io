@@ -7,21 +7,26 @@ window.addEventListener("DOMContentLoaded", () => {
     const gomma = document.getElementById('gomma');
     const bottoniColori = document.querySelectorAll("button.color-button");
 
-    canvas.addEventListener('touchstart', function (e) {
+    canvas.addEventListener('touchstart',  (e) =>{
         disegno = true;
         ctx.beginPath();
         ctx.moveTo(e.offsetX, e.offsetY);
     });
 
-    canvas.addEventListener('touchmove', function (e)  {
+    canvas.addEventListener('touchmove',  (e) => {
         if (disegno) {
+            console.log(e,e.offsetX, e.offsetY)
+            var rect = e.target.getBoundingClientRect();
+
+            var x = e.targetTouches[0].pageX - rect.left;
+            var y = e.targetTouches[0].pageY - rect.top;
             ctx.strokeStyle = coloreattuale;
-            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.lineTo(x, y);
             ctx.stroke();
         }
     });
 
-    canvas.addEventListener('touchend', function (e)  {
+    canvas.addEventListener('touchend',  (e) => {
         disegno = false;
     });
     
