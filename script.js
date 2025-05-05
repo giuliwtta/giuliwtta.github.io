@@ -7,12 +7,27 @@ window.addEventListener("DOMContentLoaded", () => {
     const gomma = document.getElementById('gomma');
     const bottoniColori = document.querySelectorAll("button.color-button");
 
-    const resizeCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    canvas.addEventListener("touchmove", function (e) {
+        disegno = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+    })
+    
+    function aggiornaAltezzaCanvas () {
+        const testoDiv = document.querySelector('.controltext');
+        const canvas = document.getElementById('tela');
+        const altezzaFinestra = window.innerHeight;
+        const altezzatesto = testoDiv.offsetHeight;
+        const nuovaAltezza = altezzaFinestra - altezzatesto;
+        canvas.height = nuovaAltezza;
+    }
+    
+    canvas.width = window.innerWidth;
+
+    
+    window.addEventListener('load', aggiornaAltezzaCanvas);
+    window.addEventListener('resize', aggiornaAltezzaCanvas);
+    
 
     ctx.lineWidth = 5;
     ctx.lineCap = "round";
