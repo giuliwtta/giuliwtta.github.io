@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
         disegno = true;
         ctx.beginPath();
         ctx.moveTo(e.offsetX, e.offsetY);
-    })
+    }, false);
     
     function aggiornaAltezzaCanvas () {
         const testoDiv = document.querySelector('.controltext');
