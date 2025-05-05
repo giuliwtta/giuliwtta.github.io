@@ -1,7 +1,6 @@
 h1 {
     font-size: 75px; 
     color: #ff0080; 
-    margin-top: 25px;
     text-align: center;
 }
 div {
@@ -42,9 +41,6 @@ canvas {
     display: block; 
     background-color: white;
 }
-body {
-    background-color: antiquewhite;
-}
 
 .control-panel {
     width: 100%;
@@ -82,4 +78,7 @@ body {
 body {
     background-image: url('https://st2.depositphotos.com/5674338/8459/i/450/depositphotos_84592524-stock-illustration-hello-kitty-on-the-screen.jpg');
     background-size: 20%;
+    background-color: antiquewhite;
+    margin: 0;
+    overflow: hidden;
 }

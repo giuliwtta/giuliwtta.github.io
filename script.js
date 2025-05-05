@@ -15,9 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     canvas.addEventListener('touchmove',  (e) => {
         if (disegno) {
-            console.log(e,e.offsetX, e.offsetY)
             var rect = e.target.getBoundingClientRect();
-
             var x = e.targetTouches[0].pageX - rect.left;
             var y = e.targetTouches[0].pageY - rect.top;
             ctx.strokeStyle = coloreattuale;
