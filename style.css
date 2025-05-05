@@ -1,6 +1,7 @@
 h1 {
     font-size: 75px; 
-    color: #ff0080; 
+    color: rgb(255, 188, 188); 
+    -webkit-text-stroke: 2px rgb(255, 188, 188);
     text-align: center;
 }
 div {
