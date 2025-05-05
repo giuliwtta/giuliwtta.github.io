@@ -7,11 +7,23 @@ window.addEventListener("DOMContentLoaded", () => {
     const gomma = document.getElementById('gomma');
     const bottoniColori = document.querySelectorAll("button.color-button");
 
-    canvas.addEventListener("touchmove", function (e) {
+    canvas.addEventListener('touchstart', function (e) {
         disegno = true;
         ctx.beginPath();
         ctx.moveTo(e.offsetX, e.offsetY);
-    }, false);
+    });
+
+    canvas.addEventListener('touchmove', function (e)  {
+        if (disegno) {
+            ctx.strokeStyle = coloreattuale;
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+        }
+    });
+
+    canvas.addEventListener('touchend', function (e)  {
+        disegno = false;
+    });
     
     function aggiornaAltezzaCanvas () {
         const testoDiv = document.querySelector('.controltext');
